@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour-changer</title>
+</head>
+<body>
+    <h1 id="element">Colour Changer</h1>
+    <button id="button">Change colour</button>
+    <script>
+        let body=document.querySelector("body");
+        body.style.backgroundColor= "red";
+        let button=document.getElementById("button");
+        button.addEventListener("click",function(){
+        let colors=["red","blue","green","pink","yellow","violet"];
+        body.style.backgroundColor=colors[Math.floor(Math.random()*6)];
+        });
+    </script>
+
+</body>
+</html>
