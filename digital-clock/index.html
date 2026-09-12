@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction:column ;
+            justify-content: center;
+            background-color:rgb(34, 5, 43);
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            align-items: center;
+        }
+        h1 {
+            font-size: 30px;
+            letter-spacing: 2px;
+            font-style: italic;
+            text-shadow: 0 0 7px rgb(110, 13, 102);
+            margin-bottom: 10px; 
+            background-color: rgb(156, 153, 148); 
+            padding:15px 20px;
+            color: #18011e;
+            border-radius:60px;
+        }
+        h2 {
+            font-size: 60px;
+            font-family: monospace;
+            letter-spacing: 4px;
+            color:black;
+            text-shadow: 0 0 10px rgb(243, 240, 240);
+            background-color: #262026;
+            padding: 20px 30px;
+            border-radius: 70px; 
+            box-shadow: 0 0 20px #c6bdbd;  
+            border: 1px solid #444;
+            margin-top:10px;
+            transition: 0.3s;
+            max-width: 90%;
+        }
+        h2:hover {
+           transform: scale(1.05);
+        }
+        @media (max-width: 600px) {
+         h2 {
+        font-size: 40px;
+        }
+       }
+    </style>
+</head>
+<body>
+    <h1>Digital Clock</h1>
+    <h2 id="dc"></h2>
+    <script>
+        let clock=document.getElementById("dc");
+        setInterval(function(){
+        let now = new Date();
+        let minutes=now.getMinutes();
+        let hours=now.getHours();
+        let seconds=now.getSeconds();
+        let ampm;
+        if(hours>=12) {ampm="PM";}
+        else {ampm="AM";}
+        if(hours===0){
+            hours=12;
+        }
+        else if(hours>12){
+            hours-=12;
+        }
+        clock.textContent=hours.toString().padStart(2,"0")+":"+minutes.toString().padStart(2,"0")+":"+seconds.toString().padStart(2,"0")+" "+ampm},1000);
+    </script>
+    
+</body>
+</html>
