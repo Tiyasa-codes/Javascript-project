@@ -97,4 +97,95 @@
 
     .card p {
         color: #8b9a94;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .arrow {
+        display: inline-block;
+        margin-top: 20px;
+        color: #7ee787;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 60px;
+        color: #56635e;
+        font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 36px;
+        }
+
+        body {
+            padding: 40px 18px;
+        }
+    }
+</style>
 ```
+
+</head>
+
+<body>
+
+```
+<div class="container">
+
+    <header>
+
+        <div class="tag">✦ Learning by Building</div>
+
+        <h1>My JavaScript Projects</h1>
+
+        <p class="intro">
+            A little collection of things I've built<br>
+            while learning JavaScript ♡
+        </p>
+
+    </header>
+
+    <div class="projects">
+
+        <a href="counter-app/" class="card">
+            <div class="icon">🔢</div>
+            <h2>Counter App</h2>
+            <p>A simple counter built using JavaScript and DOM manipulation.</p>
+            <span class="arrow">View project →</span>
+        </a>
+
+        <a href="color changer/" class="card">
+            <div class="icon">🎨</div>
+            <h2>Color Changer</h2>
+            <p>A fun little project that changes the background color randomly.</p>
+            <span class="arrow">View project →</span>
+        </a>
+
+        <a href="digital-clock/" class="card">
+            <div class="icon">⏰</div>
+            <h2>Digital Clock</h2>
+            <p>A real-time digital clock made with JavaScript.</p>
+            <span class="arrow">View project →</span>
+        </a>
+
+        <a href="random.quote/" class="card">
+            <div class="icon">💭</div>
+            <h2>Random Quote</h2>
+            <p>Generate a new motivational quote with every click.</p>
+            <span class="arrow">View project →</span>
+        </a>
+
+    </div>
+
+    <footer>
+        Built with curiosity, code & a little bit of chaos ♡
+    </footer>
+
+</div>
+
+
+</body>
+</html>
