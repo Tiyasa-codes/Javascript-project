@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #071a12;
+        }
+        h1{
+            color: #39ff88;
+            margin-bottom: 30px;
+        }
+        #quote{
+            background-color:#0d2b1f;
+            color:#eafff2;
+            padding: 30px;
+            width:500px;
+            max-width: 80%;
+            text-align: center;
+            border-radius: 15px;
+            font-size: 24px;
+            line-height: 1.5;
+            border: 1px solid #39ff88;
+            box-shadow: 0 0 20px rgba(57, 255, 136, 0.2);
+        }
+        #author{
+            color: #39ff88;
+            font-size: 18px;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        #new\ quote{
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #39ff88;
+            color:#071a12;
+            transition: 0.3s;
+        }
+        #New\ quote:hover {
+          background-color: #1ed760;
+          transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Random quote generator</h1>
+    <h2 id="quote"></h2>
+    <h2 id="author"></h2>
+    <button id="New quote">New Quote</button>
+    <script>
+        let quotes=[
+            {
+                quote:"The only way to do great work is to love what you do",
+                author:"Steve Jobs"
+            },
+            {
+                quote:"It always seems impossible until it’s done.",
+                author:"Nelson Mandela"
+
+            },
+            {
+                quote:"Success is the sum of small efforts, repeated day in and day out" ,
+                author:"Robert Collier"
+            }
+        ];
+        let quoteElement=document.getElementById("quote");
+        let authorElement=document.getElementById("author");
+        let quotebutton=document.getElementById("New quote");
+        quotebutton.addEventListener("click",function(){
+           generateQuote();
+        });
+        function generateQuote(){
+            let randomIndex=Math.floor(Math.random()*quotes.length);
+            let randomQuote=quotes[randomIndex];
+            quoteElement.textContent=randomQuote.quote;
+            authorElement.textContent=randomQuote.author;
+        };
+    </script>
+</body>
+</html>
