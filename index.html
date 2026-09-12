@@ -1,88 +1,188 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My JavaScript Projects</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 50px 20px;
-        }
+```
+<title>My JavaScript Projects</title>
 
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        min-height: 100vh;
+        background: #fff7f3;
+        color: #3d2f2a;
+        padding: 50px 20px;
+    }
+
+    .container {
+        max-width: 1050px;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    .tag {
+        display: inline-block;
+        background: #f4d8cf;
+        color: #704b42;
+        padding: 8px 18px;
+        border-radius: 30px;
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 14px;
+    }
+
+    .intro {
+        color: #806d66;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        display: block;
+        background: white;
+        padding: 32px 25px;
+        border-radius: 22px;
+        text-decoration: none;
+        color: #3d2f2a;
+        border: 1px solid #f0ddd7;
+        box-shadow: 0 10px 30px rgba(100, 70, 60, 0.08);
+        transition: 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 35px rgba(100, 70, 60, 0.15);
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff0eb;
+        border-radius: 17px;
+        font-size: 28px;
+        margin-bottom: 22px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        color: #8a7770;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .arrow {
+        display: inline-block;
+        margin-top: 20px;
+        color: #a65d4f;
+        font-weight: bold;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 60px;
+        color: #a8958e;
+        font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
         h1 {
-            margin-bottom: 10px;
+            font-size: 36px;
         }
 
-        p {
-            color: #aaa;
-            margin-bottom: 40px;
+        body {
+            padding: 35px 18px;
         }
+    }
+</style>
+```
 
-        .projects {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .card {
-            background: #222;
-            padding: 25px;
-            width: 220px;
-            border-radius: 12px;
-        }
-
-        .card h2 {
-            font-size: 20px;
-        }
-
-        .card a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 18px;
-            background: #fff;
-            color: #111;
-            text-decoration: none;
-            border-radius: 6px;
-        }
-    </style>
 </head>
 
 <body>
 
-    <h1>My JavaScript Projects 🚀</h1>
+```
+<div class="container">
 
-    <p>A collection of my JavaScript projects.</p>
+    <header>
+        <div class="tag">✦ Learning by Building</div>
+
+        <h1>My JavaScript Projects</h1>
+
+        <p class="intro">
+            A little collection of things I've built<br>
+            while learning JavaScript ♡
+        </p>
+    </header>
 
     <div class="projects">
 
-        <div class="card">
+        <a href="counter-app/" class="card">
+            <div class="icon">🔢</div>
             <h2>Counter App</h2>
-            <a href="counter-app/">View Project</a>
-        </div>
+            <p>A simple counter built using JavaScript and DOM manipulation.</p>
+            <span class="arrow">View project →</span>
+        </a>
 
-        <div class="card">
-            <h2>Colour Changer</h2>
-            <a href="colour-changer/">View Project</a>
-        </div>
+        <a href="color changer/" class="card">
+            <div class="icon">🎨</div>
+            <h2>Color Changer</h2>
+            <p>A fun little project that changes the background color randomly.</p>
+            <span class="arrow">View project →</span>
+        </a>
 
-        <div class="card">
+        <a href="digital-clock/" class="card">
+            <div class="icon">⏰</div>
             <h2>Digital Clock</h2>
-            <a href="digital-clock/">View Project</a>
-        </div>
+            <p>A real-time digital clock made with JavaScript.</p>
+            <span class="arrow">View project →</span>
+        </a>
 
-        <div class="card">
-            <h2>Random Quote Generator</h2>
-            <a href="random_quote/">View Project</a>
-        </div>
+        <a href="random.quote/" class="card">
+            <div class="icon">💭</div>
+            <h2>Random Quote</h2>
+            <p>Generate a new motivational quote with every click.</p>
+            <span class="arrow">View project →</span>
+        </a>
 
     </div>
 
+    <footer>
+        Built with curiosity, code & a little bit of chaos ♡
+    </footer>
+
+</div>
+```
+
 </body>
 </html>
+
