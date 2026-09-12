@@ -16,11 +16,11 @@
     }
 
     body {
-        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-family: Arial, sans-serif;
         min-height: 100vh;
-        background: #fff7f3;
-        color: #3d2f2a;
-        padding: 50px 20px;
+        background: #0b0f0e;
+        color: #f1f5f4;
+        padding: 60px 20px;
     }
 
     .container {
@@ -35,21 +35,22 @@
 
     .tag {
         display: inline-block;
-        background: #f4d8cf;
-        color: #704b42;
+        color: #7ee787;
+        border: 1px solid #263f2d;
+        background: #111a14;
         padding: 8px 18px;
         border-radius: 30px;
         font-size: 14px;
-        margin-bottom: 18px;
+        margin-bottom: 20px;
     }
 
     h1 {
         font-size: 48px;
-        margin-bottom: 14px;
+        margin-bottom: 15px;
     }
 
     .intro {
-        color: #806d66;
+        color: #8b9a94;
         font-size: 17px;
         line-height: 1.6;
     }
@@ -57,132 +58,43 @@
     .projects {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 25px;
+        gap: 24px;
     }
 
     .card {
         display: block;
-        background: white;
-        padding: 32px 25px;
-        border-radius: 22px;
+        background: #111716;
+        padding: 30px 25px;
+        border-radius: 20px;
         text-decoration: none;
-        color: #3d2f2a;
-        border: 1px solid #f0ddd7;
-        box-shadow: 0 10px 30px rgba(100, 70, 60, 0.08);
+        color: #f1f5f4;
+        border: 1px solid #202b27;
         transition: 0.3s ease;
     }
 
     .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 18px 35px rgba(100, 70, 60, 0.15);
+        transform: translateY(-7px);
+        border-color: #4ade80;
+        box-shadow: 0 12px 30px rgba(74, 222, 128, 0.08);
     }
 
     .icon {
-        width: 60px;
-        height: 60px;
+        width: 58px;
+        height: 58px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #fff0eb;
-        border-radius: 17px;
-        font-size: 28px;
+        background: #17231c;
+        border-radius: 16px;
+        font-size: 27px;
         margin-bottom: 22px;
     }
 
     .card h2 {
-        font-size: 22px;
+        font-size: 21px;
         margin-bottom: 10px;
     }
 
     .card p {
-        color: #8a7770;
-        font-size: 14px;
-        line-height: 1.6;
-    }
-
-    .arrow {
-        display: inline-block;
-        margin-top: 20px;
-        color: #a65d4f;
-        font-weight: bold;
-    }
-
-    footer {
-        text-align: center;
-        margin-top: 60px;
-        color: #a8958e;
-        font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-        h1 {
-            font-size: 36px;
-        }
-
-        body {
-            padding: 35px 18px;
-        }
-    }
-</style>
+        color: #8b9a94;
 ```
-
-</head>
-
-<body>
-
-```
-<div class="container">
-
-    <header>
-        <div class="tag">✦ Learning by Building</div>
-
-        <h1>My JavaScript Projects</h1>
-
-        <p class="intro">
-            A little collection of things I've built<br>
-            while learning JavaScript ♡
-        </p>
-    </header>
-
-    <div class="projects">
-
-        <a href="counter-app/" class="card">
-            <div class="icon">🔢</div>
-            <h2>Counter App</h2>
-            <p>A simple counter built using JavaScript and DOM manipulation.</p>
-            <span class="arrow">View project →</span>
-        </a>
-
-        <a href="color changer/" class="card">
-            <div class="icon">🎨</div>
-            <h2>Color Changer</h2>
-            <p>A fun little project that changes the background color randomly.</p>
-            <span class="arrow">View project →</span>
-        </a>
-
-        <a href="digital-clock/" class="card">
-            <div class="icon">⏰</div>
-            <h2>Digital Clock</h2>
-            <p>A real-time digital clock made with JavaScript.</p>
-            <span class="arrow">View project →</span>
-        </a>
-
-        <a href="random.quote/" class="card">
-            <div class="icon">💭</div>
-            <h2>Random Quote</h2>
-            <p>Generate a new motivational quote with every click.</p>
-            <span class="arrow">View project →</span>
-        </a>
-
-    </div>
-
-    <footer>
-        Built with curiosity, code & a little bit of chaos ♡
-    </footer>
-
-</div>
-```
-
-</body>
-</html>
-
