@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ddff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 500px;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 3px solid #8b6bb1;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px #b9a3d6;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 25px;
+    color: #4b315f;
+}
+
+#task {
+    width: 75%;
+    height: 48px;
+    padding: 12px;
+    border: 2px solid #b9a3d6;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#task:focus {
+    outline: none;
+    border-color: #8b6bb1;
+}
+
+#add {
+    height: 48px;
+    padding: 0 18px;
+    margin-left: 6px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8b6bb1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#add:hover {
+    background-color: #725296;
+}
+
+#box {
+    margin-top: 25px;
+}
+
+#box p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    padding: 12px 15px;
+    background-color: #f3edff;
+    color: #4b315f;
+    border-radius: 10px;
+}
+
+#box button {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 7px;
+    background-color: #d8c5f2;
+    color: #4b315f;
+    cursor: pointer;
+}
+
+#box button:hover {
+    background-color: #c5a9e6;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>To-do List</h1>
+    <input id="task" placeholder="Enter your task">
+    <button id="add">Add task</button>
+    <div id="box"></div>
+    </div>
+    <script>
+        let task=document.getElementById("task");
+        let add=document.getElementById("add");
+        add.addEventListener("click",function(){
+            let input=task.value;
+            if(input==="") return;
+            let para=document.createElement("p");
+            para.textContent=input;
+            box.appendChild(para);
+            task.value="";
+            let del=document.createElement("button");
+            del.textContent="Delete";
+            para.appendChild(del);
+            box.appendChild(para);
+            del.addEventListener("click",function(){
+                para.remove();
+            })
+            para.addEventListener("click",function(){
+                if(para.style.textDecoration==="line-through"){
+                    para.style.textDecoration="";
+                }else{
+                    para.style.textDecoration="line-through";
+                }
+            })
+
+        })
+    </script>
+</body>
+</html>
